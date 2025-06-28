@@ -10,6 +10,45 @@ Suggestion: create a python virtual environment for this project. See the [docum
 python tests/test_gilded_rose.py
 ```
 
+## Local Project Setup and Testing with uv
+
+To set up the project locally and run tests using `uv` and `pytest`, follow these steps:
+
+1.  **Install uv**: If you don't have `uv` installed, you can install it using pip:
+    ```bash
+    pip install uv
+    ```
+
+2.  **Create a virtual environment**: Navigate to the `python` directory and create a virtual environment:
+    ```bash
+    cd python
+    uv venv
+    ```
+
+3.  **Activate the virtual environment**:
+    *   On macOS/Linux:
+        ```bash
+        source .venv/bin/activate
+        ```
+    *   On Windows:
+        ```bash
+        .venv\Scripts\activate
+        ```
+
+4.  **Install dependencies**: Install the required packages, including `pytest`:
+    ```bash
+    uv pip install -r requirements.txt pytest
+    ```
+
+5.  **Run tests with pytest**: Once dependencies are installed, you can run the tests:
+    ```bash
+    pytest tests/
+    ```
+    Or, to run a specific test file:
+    ```bash
+    pytest tests/test_gilded_rose.py
+    ```
+
 ## Run the TextTest fixture from the Command-Line
 
 For e.g. 10 days:
